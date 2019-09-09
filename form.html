@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Formulario Passagens</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+
+  <form action="formEnviar.html">
+    <h1>Solicitação de Passagens Aéreas</h1>
+
+    <p class="nome">
+      <input type="text" id="nomeId" name="nome" onblur="paraNome(this.value);">
+      <label for="nome">Nome Completo</label>
+    </p>
+    <span id="erroNome"></span>
+
+    <p class="end">
+      <input type="text" id="endId" name="end" onblur="paraEnd(this.value);">
+      <label for="end">Endereco</label>
+    </p>
+    <span id="erroEnd"></span>
+
+    <p class="cidade">
+      <input type="text" id="cidadeId" name="cidade" onblur="paraCidade(this.value);">
+      <label for="cidade">Cidade</label>
+    </p>
+    <span id="erroCidade"></span>
+
+    <p class="uf">
+      <input type="text" id="ufId" name="uf" >
+      <label for="uf">UF</label>
+    </p>
+    <span id="erroUf"></span>
+
+    <p class="tel">
+      <input type="text" id="telId" name="tel">
+      <label for="tel">Telefone-Residencial</label>
+    </p>
+    <span id="erroTel"></span>
+
+    <p class="cel">
+      <input type="text" id="celId" name="cel" >
+      <label for="cel">Celular</label>
+    </p>
+    <span id="erroCel"></span>
+
+    <p class="email">
+      <input type="text" id="emailId" name="email" onblur="validarEmail(this.value);"/>
+      <label for="email">E-mail</label>
+    </p>
+    <span id="erro"></span>
+
+    <p class="prof">
+      <input type="text" id="profId" name="prof" onblur="paraProf(this.value);">
+      <label for="prof">Profissao</label>
+    </p>
+    <span id="erroProf"></span>
+
+    <p class="motivo" onblur="validarMotivo(this.option);">
+      <select>
+        <option value="trabalho">Trabalho</option>
+        <option value="turismo">Turismo</option>
+        <option value="estudo">Estudo</option>
+        <option value="sair">SairdoPaís</option>
+      </select>
+      <label for="motivo">Motivo da Solicitacao</label>
+    </p>
+    <span id="erroMotivo"></span>
+
+    <p class="rg">
+      <input type="text" id="rgId" name="rg">
+      <label for="rg">RG</label>
+    </p>
+
+    <p class="cnh">
+      <input type="text" id="cnhId" name="cnh">
+      <label for="cnh">CNH</label>
+    </p>
+    <p class="cpf">
+      <input type="text" id="cpfId" name="cpf">
+      <label for="cpf">CPF</label>
+    </p>
+
+    <p class="titulo">
+      <input type="text" id="tituloId" name="titulo">
+      <label for="titulo">Titulo de Eleitor</label>
+    </p>
+
+    <p class="passA">
+      <input type="radio" id="passAId" name="passA" value="Sim" onclick="validarPassaporte(this.value);">
+      <label for="passA">Sim</label>
+      <input type="radio" id="passAId" name="passA" value="Nao" onclick="validarPassaporte(this.value);">
+      <label for="passA">Nao</label>
+      <label for="passA">Passaporte Antigo?</label>
+    </p>
+
+    <p class="numP">
+      <input type="text" id="numPId" name="numP">
+      <label for="numP">Numero do Passaporte</label>
+    </p>
+
+    <p class="submit">
+      <input type="submit" value="Enviar" />
+    </p>
+  </form>
+<script src="maskJS.js"></script>
+<script src="passagem.js"></script>
+
+</body>
+</html>
